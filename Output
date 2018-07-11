@@ -1,0 +1,19 @@
+Welcome to Buildroot
+buildroot login: root  
+# ifconfig eth0 192.168.100.13 up
+[   16.879618] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[   16.885567] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   16.887140] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+# wget 192.168.100.100:8080/timer_module.ko
+Connecting to 192.168.100.100:8080 (192.168.100.100:8080)
+wget: can't open 'timer_module.ko': File exists
+# rm timer_module.ko 
+# wget 192.168.100.100:8080/timer_module.ko
+Connecting to 192.168.100.100:8080 (192.168.100.100:8080)
+timer_module.ko      100% |*******************************| 93240   0:00:00 ETA
+# insmod timer_module.ko 
+[   34.504652] timer_module: loading out-of-tree module taints kernel.
+# [   86.288347] random: crng init done
+[   95.200258] Hi, I`m first event!
+[  218.080077] HI! I`m second event! 
+
